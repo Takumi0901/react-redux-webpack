@@ -1,0 +1,12 @@
+*.class
+*.log
+.DS_Store
+
+# Scala-IDE specific
+.idea/
+
+# npm
+node_modules/
+
+# web
+bundle.js
