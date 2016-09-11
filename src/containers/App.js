@@ -3,42 +3,46 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Modal from '../components/Modal'
 import {modalOpen} from '../actions/Modal'
+import DevTools from './DevTools'
 
-export default class App extends Component {
+class App extends Component {
   componentWillMount() {}
 
   handleModalOpen(){
-    console.log('*************')
-    console.log('Open')
     this.props.modalOpen(true)
   }
 
   handleModalClose(){
-    console.log('*************')
-    console.log('Close')
     this.props.modalOpen(false)
   }
 
   render() {
-    const {Opened} = this.props
+    const {show} = this.props
     return (
-        <div>
-          <div className="l-wrapper">
+      <div>
+        <div className="l-wrapper">
+          <div className="c-container">
+            <h1 className="c-title c-title--primary">Modal</h1>
+            <button className="c-btn c-btn-primary--flat" onClick={this.handleModalOpen.bind(this)}>Modal Open</button>
             <Modal
               handleModalOpen={this.handleModalOpen.bind(this)}
               handleModalClose={this.handleModalClose.bind(this)}
-              Opened={Opened}
-            />
+              show={show}
+              title='modalテスト'
+            >
+              モーダル内容
+            </Modal>
           </div>
         </div>
+        <DevTools />
+      </div>
     )
   }
 }
 
 function mapStateToProps(state) {
-  console.log(state)
   return {
-    Opened: state.Modal.Opened
+    show: state.Modal.show
   }
 }
 

@@ -3,6 +3,6 @@ import Modal from "./Modal"
 
 const App = combineReducers({
   Modal,
-});
+})
 
 export default App

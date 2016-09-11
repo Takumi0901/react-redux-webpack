@@ -1,8 +1,8 @@
 import * as ActionTypes from '../constants/ActionTypes'
 
-export function modalOpen(clicked) {
+export function modalOpen(dec) {
   return {
     type: ActionTypes.MODAL_OPEN,
-    Opened: clicked
+    show: dec
   }
 }

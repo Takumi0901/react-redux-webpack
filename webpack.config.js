@@ -1,3 +1,4 @@
+var DashboardPlugin = require('webpack-dashboard/plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -9,6 +10,9 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
     ]
   },
+  plugins: [
+    new DashboardPlugin()
+  ],
   devServer: {
     contentBase: 'public'
   }
