@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Modal from '../components/Modal'
 import {modalOpen} from '../actions/Modal'
 import DevTools from './DevTools'
+import Form from './Form'
 
 class App extends Component {
   componentWillMount() {}
@@ -14,6 +15,11 @@ class App extends Component {
 
   handleModalClose(){
     this.props.modalOpen(false)
+  }
+
+  onSubmitEvent(values){
+    console.log('APIに送信したり色々するとこ')
+    console.log(values)
   }
 
   render() {
@@ -33,6 +39,7 @@ class App extends Component {
               モーダル内容
             </Modal>
           </div>
+          <Form onSubmit={this.onSubmitEvent.bind(this)} />
         </div>
         <DevTools />
       </div>
