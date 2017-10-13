@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dashboard -- webpack-dev-server -d --hot --inline --port 4000",
+    "start": "webpack-dashboard -- webpack-dev-server -d --hot --inline --port 2222",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack-dashboard -- webpack -d --watch"
   },
@@ -29,10 +29,10 @@
     "webpack-init": "^0.1.1"
   },
   "dependencies": {
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
-    "react-redux": "^4.4.5",
-    "redux": "^3.5.2",
-    "redux-form": "6.0.5"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-form": "^7.1.1"
   }
 }
