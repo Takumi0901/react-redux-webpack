@@ -196,24 +196,24 @@ textarea {
   text-shadow: none;
 }
 
-[aria-busy="true"] {
+[data-busy="true"] {
   cursor: progress;
 }
 
-[aria-controls] {
+[data-controls] {
   cursor: pointer;
 }
 
-[aria-disabled] {
+[data-disabled] {
   cursor: default;
 }
 
-[hidden][aria-hidden="false"] {
+[hidden][data-hidden="false"] {
   clip: rect(0 0 0 0);
   display: inherit;
   position: absolute;
 }
-[hidden][aria-hidden="false"]:focus {
+[hidden][data-hidden="false"]:focus {
   clip: auto;
 }
 
@@ -2329,7 +2329,7 @@ card、containerと組み合わせて使う
   border-radius: 8px;
 }
 
-.c-modal.is-fadein, .c-modal[aria-clicked="true"] {
+.c-modal.is-fadein, .c-modal[data-clicked="true"] {
   display: block;
   opacity: 1;
   animation-duration: 0.5s;
@@ -2527,18 +2527,18 @@ card、containerと組み合わせて使う
   text-align: center;
 }
 
-.c-tab__body.is-hidden, .c-tab__body[aria-hidden="true"] {
+.c-tab__body.is-hidden, .c-tab__body[data-hidden="true"] {
   display: none;
 }
 
 .c-tab__menu__item.is-active .c-tab__btn,
-.c-tab__btn[aria-selected="true"] {
+.c-tab__btn[data-selected="true"] {
   border-bottom: solid 2px #4bd5f2;
   color: #4bd5f2;
   position: relative;
 }
 .c-tab__menu__item.is-active .c-tab__btn:after,
-.c-tab__btn[aria-selected="true"]:after {
+.c-tab__btn[data-selected="true"]:after {
   top: 100%;
   left: 50%;
   border: solid transparent;

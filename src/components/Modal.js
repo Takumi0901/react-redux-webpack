@@ -14,7 +14,7 @@ export default class Modal extends React.Component{
   render(){
     const {show, title, children} = this.props
     return(
-      <div className="c-modal" aria-clicked={show === true ? 'true' : 'false'}>
+      <div className="c-modal" data-clicked={show === true ? 'true' : 'false'}>
         <div className="c-modal__panel">
           <div className="c-modal__header">
             <h3>{title}</h3>

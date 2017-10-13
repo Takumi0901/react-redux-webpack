@@ -1,18 +1,26 @@
 var DashboardPlugin = require('webpack-dashboard/plugin');
 module.exports = {
-  entry: './src/index.js',
+  entry: __dirname + '/src/index.js',
   output: {
-    path: './public',
+    path: __dirname + '/public',
     filename: 'bundle.js',
   },
   module: {
-    loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+    rules: [
+      {
+        test: /\.js[x]?$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader'
+        ]
+      }
     ]
   },
-  plugins: [
-    new DashboardPlugin()
-  ],
+  resolve: {
+    modules: [
+      "node_modules"
+    ]
+  },
   devServer: {
     contentBase: 'public'
   }
