@@ -1,4 +1,3 @@
-var DashboardPlugin = require('webpack-dashboard/plugin');
 module.exports = {
   entry: __dirname + '/src/index.js',
   output: {

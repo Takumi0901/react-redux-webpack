@@ -41,7 +41,6 @@ class App extends Component {
           </div>
           <Form onSubmit={this.onSubmitEvent.bind(this)} />
         </div>
-        <DevTools />
       </div>
     )
   }
