@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Modal from '../components/Modal'
 import {modalOpen} from '../actions/Modal'
-import DevTools from './DevTools'
 import Form from './Form'
 
 class App extends Component {
