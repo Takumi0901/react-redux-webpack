@@ -27,7 +27,7 @@ class App extends Component {
       <div>
         <div className="l-wrapper">
           <div className="c-container">
-            <h1 className="c-title c-title--primary">Modal</h1>
+            <h1 className="c-title c-title--primary">ModalHoge</h1>
             <button className="c-btn c-btn-primary--flat" onClick={this.handleModalOpen.bind(this)}>Modal Open</button>
             <Modal
               handleModalOpen={this.handleModalOpen.bind(this)}

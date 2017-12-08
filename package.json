@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel ./src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/webpack/bin/webpack.js --progress --profile --colors"
+    "build": "parcel build ./src/index.html"
   },
   "repository": {
     "type": "git",
